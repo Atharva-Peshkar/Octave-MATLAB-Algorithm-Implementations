@@ -1,0 +1,12 @@
+					FEATURE NORMALIZATION ALTERNATE CODE
+
+
+for i = 1:size(X,1)
+  mu = mean(X);
+  X_norm(i,:) = X_norm(i,:)-mu;
+endfor
+for i = 1:size(X,1)
+  sigma = std(X);
+  X_norm(i,:) = X_norm(i,:)./sigma;
+endfor
+fprintf('Normalized values: %f\n',sigma)
